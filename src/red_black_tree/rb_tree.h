@@ -50,7 +50,7 @@ struct rb_tree {
 /** Renombramos la estructura anterior para un uso más simple. */
 typedef struct rb_tree rb_tree;
 
-/** 
+	/** 
  * Inicializa un rb-tree que ordena puntos a partir de la coordenada que se le
  * pase.
 */

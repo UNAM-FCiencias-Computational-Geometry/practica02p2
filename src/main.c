@@ -42,16 +42,18 @@ int main(void)
 	 * Vertice espejo que sirve para obtener el vertice con las mismas 
 	 * coordenadas que tiene la DCEL.
 	 */
-	vertex* G = init_point(3.0,7.0,"");
+	vertex* F = init_point(4.0, 5.0,"");
 	
-	vertex* original_G = rb_search(dcel->vertex,G);
-	destroy_point(G);
+	vertex* original_G = rb_search(dcel->vertex, F);
+	destroy_point(F);
 	
 	printf("Point: %s\n",original_G->name);
 
 	/** Prueba de la funcion incident_he_to_v() que deben implementar. */
+	printf("-----------------PRUEBAS DE FUNCIONES------------\n");
+	printf("prueba de la funcion incident_he_to_v\n");
 	list* incident_he;
-	incident_he = incident_he_to_v(original_G);
+	incident_he = incident_he_to_v(original_G); // modificado
 
 	print_list(incident_he);
 	destroy_double_linked_list(incident_he);
@@ -63,9 +65,11 @@ int main(void)
 	face* original_face1 = rb_search(dcel->face,face1);
 
 	printf("%s\n",original_face1->name);
-
+	
 	/** Prueba de la funcion incident_f_to_f() que deben implementar. */
+	printf("::::::::::::::::::::pruebas con incident_f_to_f()::::::::::::::::::::::\n");
 	list* incident_faces;
+	
 	incident_faces = incident_f_to_f(original_face1);
 	
 	print_list(incident_faces);
@@ -80,8 +84,10 @@ int main(void)
 	printf("%s\n", original_face2->name);
 
 	/** Prueba de la funcion incident_he_to_f() que deben implementar. */
+	printf("pruebas con incident_he_to_f()\n");
 	list* incident_half_edge_to_faces;
 	incident_half_edge_to_faces = incident_he_to_f(original_face2);
+	//incident_half_edge_to_faces = he_from_f(original_face2);
 
 	print_list(incident_half_edge_to_faces);
 	destroy_double_linked_list(incident_half_edge_to_faces);

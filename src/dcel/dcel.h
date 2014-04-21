@@ -72,7 +72,7 @@ list* incident_he_to_v(vertex* vertex);
  * incident_f_to_f() debe regresar una lista de face que tengan como origen la
  * cara que se le pase. Puedes utilizar la funcion rb_tree_to_list(), 
  * recuerda que el arbol rojo negro te puede ayudar para saber si una cara ya
- * esta dentro del del arbol rojo negro.
+ * esta dentro del arbol rojo negro.
  */
 list* incident_f_to_f(face* face);
 
@@ -82,4 +82,8 @@ list* incident_f_to_f(face* face);
  */
 list* incident_he_to_f(face* face);
 
+/**
+ * regresa el contorno de aristas que conforman una cara
+ */
+list* he_from_f(face* face);
 #endif

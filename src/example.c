@@ -258,7 +258,7 @@ dcel* construct_example()
 	/**  Inicializamos las caras. */
 	face* face1, *face2, *face3, *face4, *face5, *face6, *face7;
 	
-	face1 = init_face("face 1\0", NULL, f1_inner);
+	face1 = init_face("face 1\0", a, f1_inner);
 
 	face2 = init_face("face 2\0", c1, f2_inner);
 	
@@ -470,3 +470,4 @@ dcel* construct_example()
 	
 	return dcel;
 }
+

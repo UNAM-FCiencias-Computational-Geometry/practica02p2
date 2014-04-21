@@ -24,8 +24,8 @@ half_edge* init_half_edge(vertex* first, vertex* last, const char* name)
 	edge->first = first;
 	edge->last = last;
 
-	first->half_edge = edge;
-	last->half_edge = edge;
+	first->half_edge = edge; //segmento al que representa
+	last->half_edge = edge; 
 
 	edge->twin = NULL;
 	edge->next = NULL;
