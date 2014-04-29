@@ -11,13 +11,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void print_half_edge(half_edge* a)
-{
-	printf("Half_Edge: %s, first: %s, incident_face: %s, twin: %s, next: %s, prev: %s\n",
-		   a->name,a->first->name, ((face*) a->incident_face)->name,
-		   a->twin->name, a->next->name,a->prev->name);
-}
-
 dcel* construct_example()
 {
 	/** Declaramos los vertices. */
@@ -330,72 +323,6 @@ dcel* construct_example()
 	dcel* dcel = init_dcel();
 
 	/** Insertamos los vertices.*/
-
-	print_half_edge(a);
-	print_half_edge(a1);
-	printf("\n");
-	
-	print_half_edge(b);
-	print_half_edge(b1);
-	printf("\n");
-	
-	print_half_edge(c);	
-	print_half_edge(c1);
-	printf("\n");
-
-	print_half_edge(d);
-	print_half_edge(d1);
-	printf("\n");
-
-	print_half_edge(e);
-	print_half_edge(e1);
-	printf("\n");
-
-	print_half_edge(f);
-	print_half_edge(f1);
-	printf("\n");
-
-	print_half_edge(g);
-	print_half_edge(g1);
-	printf("\n");
-
-	print_half_edge(h);
-	print_half_edge(h1);
-	printf("\n");
-
-	print_half_edge(i);
-	print_half_edge(i1);
-	printf("\n");
-
-	print_half_edge(j);
-	print_half_edge(j1);
-	printf("\n");
-
-	print_half_edge(k);
-	print_half_edge(k1);
-	printf("\n");
-
-	print_half_edge(l);
-	print_half_edge(l1);
-	printf("\n");
-
-	print_half_edge(m);
-	print_half_edge(m1);
-	printf("\n");
-
-	print_half_edge(n);
-	print_half_edge(n1);
-	printf("\n");
-
-	print_half_edge(p);
-	print_half_edge(p1);
-	printf("\n");
-
-	print_half_edge(q);
-	print_half_edge(q1);
-	printf("\n");
-
-
 	dcel_insert_vertex(dcel,A);
 	dcel_insert_vertex(dcel,B);
 	dcel_insert_vertex(dcel,C);

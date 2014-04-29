@@ -122,7 +122,7 @@ def clean
 
   puts "Borramos todos los archivos .so"
   
-  command = "rm lib/*.so"
+  command = "rm lib/*"
   puts "\t" + command
   system(command)
 end
