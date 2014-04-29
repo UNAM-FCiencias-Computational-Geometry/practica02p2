@@ -90,7 +90,7 @@ def compile
     }
     
     if (@so == "linux")
-      command = "#{@cc} -shared -Wl,-soname,lib#{library}.1 -o lib/lib#{library} #{obj[0..-3] + "o"}" +
+      command = "#{@cc} -shared -o lib/lib#{library} #{obj[0..-3] + "o"}" +
                 " -L#{@lib_dir} #{libs}"
     elsif (@so == "mac")
       command = "#{@cc} -shared -o lib/lib#{library} #{obj[0..-3] + "o"}" +
@@ -99,12 +99,6 @@ def compile
     puts "\t" + command
     puts "No compilo de forma correcta" if not((system(command)))
   end
-
-  if (@so == "linux")
-    command = "cp lib/libface.so lib/libface.so.1"
-    system(command)
-  end
-
 end
 
 # Ejectua los tests de la correspondiente practica
